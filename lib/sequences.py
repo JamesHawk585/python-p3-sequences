@@ -16,16 +16,20 @@
 # 3. Repeat step 2 until list has reached the desired length
 
 fibonacci_list = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
-print(fibonacci_list(15))
+
 
 def print_fibonacci(length):
     fibonacci_list = [0, 1]
     if length <= 2:
-        return fibonacci_list[:length]
+        print(fibonacci_list[:length])
+        return 
+    #  Uses slicing to create a shallow copy of the original list
+    #  A shallow copy is a copy by reference.
+    #  [:length] uses the slice operator to return a list of up to the first three characters, or the length, whichever is shorter. 
     while len(fibonacci_list) < length:
        next_num = fibonacci_list[-1] + fibonacci_list[-2]
        fibonacci_list.append(next_num)
-    return fibonacci_list
+    print(fibonacci_list)
 
 
 
